@@ -23,7 +23,7 @@ pipeline {
 		}
 		stage ('Run Tests'){
 			steps {
-				sh 'dotnet test HouseRentingSystem.sln --configuration Release --no-build --verbosity normal'
+				sh 'dotnet test'
 			}
 		}
 	}
