@@ -26,8 +26,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./House-Renting-System-App/HouseRentingSystem.sln
       
-    - name: Build
+    - name: Build Application
       run: dotnet build --no-restore ./House-Renting-System-App/HouseRentingSystem.sln
       
-    - name: Test
+    - name: Run Tests
       run: dotnet test --no-build --verbosity normal ./House-Renting-System-App/HouseRentingSystem.sln
