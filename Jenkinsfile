@@ -18,7 +18,7 @@ pipeline {
 
 		stage('Build Project'){
 			steps {
-				sh 'dotnet build HouseRentingSystem.sln --configuration Release'
+				sh 'dotnet build'
 			}
 		}
 		stage ('Run Tests'){
