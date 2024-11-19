@@ -30,4 +30,4 @@ jobs:
       run: dotnet build --no-restore ../House-Renting-System-App/HouseRentingSystem.sln
       
     - name: Run Tests
-      run: dotnet test --no-build --verbosity normal ./House-Renting-System-App/HouseRentingSystem.sln
+      run: dotnet test --no-build --verbosity normal ../House-Renting-System-App/HouseRentingSystem.sln
