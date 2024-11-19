@@ -7,7 +7,7 @@ pipeline {
 	stages {
 		stage('Checkout'){
 			steps {
-				git 'https://github.com/RPrezhdarova/House-Renting-System-App'
+				checkout scm
 				}
 		}
 		
