@@ -10,20 +10,27 @@ pipeline {
 				git 'https://github.com/RPrezhdarova/House-Renting-System-App'
 				}
 		}
-		stage('Respore Nuget Packeges') {
+		
+		stage('Setup .NET'){
 			steps {
-				sh 'dotnet restore HouseRentingSystem.sln'
+				bat 'dotnet --version'
+				}
+		}
+
+		stage('Respore') {
+			steps {
+				bat 'dotnet restore'
 			}
 		}
 
 		stage('Build Project'){
 			steps {
-				sh 'dotnet build'
+				bat 'dotnet build --no-respore'
 			}
 		}
 		stage ('Run Tests'){
 			steps {
-				sh 'dotnet test HouseRentingSystem.sln --configuration Release --no-build --verbosity normal'
+				bat 'dotnet test --no-build --verbosity normal'
 			}
 		}
 	}
