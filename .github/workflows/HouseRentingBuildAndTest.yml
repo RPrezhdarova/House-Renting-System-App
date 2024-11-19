@@ -24,10 +24,10 @@ jobs:
         dotnet-version: 8.0.x
         
     - name: Restore dependencies
-      run: dotnet restore ./House-Renting-System-App/HouseRentingSystem.sln
+      run: dotnet restore ../House-Renting-System-App/HouseRentingSystem.sln
       
     - name: Build Application
-      run: dotnet build --no-restore ./House-Renting-System-App/HouseRentingSystem.sln
+      run: dotnet build --no-restore ../House-Renting-System-App/HouseRentingSystem.sln
       
     - name: Run Tests
       run: dotnet test --no-build --verbosity normal ./House-Renting-System-App/HouseRentingSystem.sln
